@@ -32,9 +32,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"M3U8";
+    self.title = @"M3U8 / RTPS";
 
     NSMutableArray *sampleList = [[NSMutableArray alloc] init];
+    
+    [sampleList addObject:@[@"Wowza Demo",
+                            @"rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov"]];
 
     [sampleList addObject:@[@"bipbop basic master playlist",
                             @"http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"]];
