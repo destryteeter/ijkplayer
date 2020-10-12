@@ -40,12 +40,13 @@
 }
 
 - (void)onClickPlayButton {
-    NSURL *url = [NSURL URLWithString:self.textView.text];
+    NSURL *url = [NSURL URLWithString:@"rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov"];// [NSURL URLWithString:self.textView.text];
     NSString *scheme = [[url scheme] lowercaseString];
     
     if ([scheme isEqualToString:@"http"]
         || [scheme isEqualToString:@"https"]
-        || [scheme isEqualToString:@"rtmp"]) {
+        || [scheme isEqualToString:@"rtmp"]
+        || [scheme isEqualToString:@"rtsp"]) {
         [IJKVideoViewController presentFromViewController:self withTitle:[NSString stringWithFormat:@"URL: %@", url] URL:url completion:^{
 //            [self.navigationController popViewControllerAnimated:NO];
         }];
